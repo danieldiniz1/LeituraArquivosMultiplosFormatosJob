@@ -1,0 +1,172 @@
+[2023-03-10 16:07:50,560] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting ArquivoMultiplosFormatosJobApplication using Java 17.0.5 with PID 16432 (C:\training\batch\arquivoMultiplosFormatosJob\target\classes started by dalexadi in C:\training\batch\arquivoMultiplosFormatosJob)
+[2023-03-10 16:07:50,562] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-10 16:07:51,072] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-10 16:07:51,094] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+[2023-03-10 16:07:51,356] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-10 16:07:51,800] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d3ef181
+[2023-03-10 16:07:51,801] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-10 16:07:51,945] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-10 16:07:52,018] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-10 16:07:52,366] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-10 16:07:52,592] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-10 16:07:52,602] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-10 16:07:52,791] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started ArquivoMultiplosFormatosJobApplication in 2.566 seconds (process running for 3.254)
+[2023-03-10 16:07:52,793] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-10 16:07:52,800] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-10 16:07:52,808] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-10 16:07:52,815] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-10 18:15:13,160] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting ArquivoMultiplosFormatosJobApplication using Java 17.0.5 with PID 18040 (C:\training\batch\arquivoMultiplosFormatosJob\target\classes started by dalexadi in C:\training\batch\arquivoMultiplosFormatosJob)
+[2023-03-10 18:15:13,164] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-10 18:15:13,653] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-10 18:15:13,681] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+[2023-03-10 18:15:14,028] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-10 18:15:14,368] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44065156
+[2023-03-10 18:15:14,370] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-10 18:15:14,512] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-10 18:15:14,566] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-10 18:15:14,862] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-10 18:15:15,076] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-10 18:15:15,089] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-10 18:15:15,119] [org.springframework.context.support.AbstractApplicationContext] [main] [592] [WARN ] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lineMapper' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/reader/ClienteTransacaoLineMapperConfig.class]: Failed to instantiate [org.springframework.batch.item.file.mapping.PatternMatchingCompositeLineMapper]: Factory method 'lineMapper' threw exception with message: Cannot invoke "java.util.Map.isEmpty()" because "fieldSetMappers" is null
+[2023-03-10 18:15:15,120] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-10 18:15:15,124] [com.zaxxer.hikari.HikariDataSource] [main] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-10 18:15:15,132] [com.zaxxer.hikari.HikariDataSource] [main] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-10 18:15:15,139] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] [main] [82] [INFO ] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2023-03-10 18:15:15,157] [org.springframework.boot.SpringApplication] [main] [822] [ERROR] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lineMapper' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/reader/ClienteTransacaoLineMapperConfig.class]: Failed to instantiate [org.springframework.batch.item.file.mapping.PatternMatchingCompositeLineMapper]: Factory method 'lineMapper' threw exception with message: Cannot invoke "java.util.Map.isEmpty()" because "fieldSetMappers" is null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:491)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at br.com.training.arquivoMultiplosFormatosJob.ArquivoMultiplosFormatosJobApplication.main(ArquivoMultiplosFormatosJobApplication.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.item.file.mapping.PatternMatchingCompositeLineMapper]: Factory method 'lineMapper' threw exception with message: Cannot invoke "java.util.Map.isEmpty()" because "fieldSetMappers" is null
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 18 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.isEmpty()" because "fieldSetMappers" is null
+	at org.springframework.batch.item.file.mapping.PatternMatchingCompositeLineMapper.setFieldSetMappers(PatternMatchingCompositeLineMapper.java:79)
+	at br.com.training.arquivoMultiplosFormatosJob.reader.ClienteTransacaoLineMapperConfig.lineMapper(ClienteTransacaoLineMapperConfig.java:23)
+	at br.com.training.arquivoMultiplosFormatosJob.reader.ClienteTransacaoLineMapperConfig$$SpringCGLIB$$0.CGLIB$lineMapper$0(<generated>)
+	at br.com.training.arquivoMultiplosFormatosJob.reader.ClienteTransacaoLineMapperConfig$$SpringCGLIB$$2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at br.com.training.arquivoMultiplosFormatosJob.reader.ClienteTransacaoLineMapperConfig$$SpringCGLIB$$0.lineMapper(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	... 19 common frames omitted
+[2023-03-10 18:16:12,022] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting ArquivoMultiplosFormatosJobApplication using Java 17.0.5 with PID 10408 (C:\training\batch\arquivoMultiplosFormatosJob\target\classes started by dalexadi in C:\training\batch\arquivoMultiplosFormatosJob)
+[2023-03-10 18:16:12,024] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-10 18:16:12,438] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-10 18:16:12,455] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+[2023-03-10 18:16:12,758] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-10 18:16:13,155] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fdca564
+[2023-03-10 18:16:13,157] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-10 18:16:13,268] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-10 18:16:13,314] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-10 18:16:13,583] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-10 18:16:13,792] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-10 18:16:13,799] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-10 18:16:13,990] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started ArquivoMultiplosFormatosJobApplication in 2.275 seconds (process running for 2.766)
+[2023-03-10 18:16:13,992] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-10 18:16:13,996] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-10 18:16:13,998] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-10 18:16:14,004] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-10 18:25:12,127] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting ArquivoMultiplosFormatosJobApplication using Java 17.0.5 with PID 14264 (C:\training\batch\arquivoMultiplosFormatosJob\target\classes started by dalexadi in C:\training\batch\arquivoMultiplosFormatosJob)
+[2023-03-10 18:25:12,129] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-10 18:25:12,571] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-10 18:25:12,589] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+[2023-03-10 18:25:12,855] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-10 18:25:13,181] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33956d1a
+[2023-03-10 18:25:13,183] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-10 18:25:13,308] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-10 18:25:13,359] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-10 18:25:13,646] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-10 18:25:13,879] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-10 18:25:13,887] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-10 18:25:14,108] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started ArquivoMultiplosFormatosJobApplication in 2.321 seconds (process running for 2.804)
+[2023-03-10 18:25:14,111] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-10 18:25:14,210] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=multiplosFormatosJob]] launched with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}'}]
+[2023-03-10 18:25:14,241] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [multiplosFormatosStep]
+[2023-03-10 18:25:14,250] [org.springframework.batch.core.step.AbstractStep] [main] [257] [ERROR] Encountered an error executing step multiplosFormatosStep in job multiplosFormatosJob
+org.springframework.batch.item.ItemStreamException: Failed to initialize the reader
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.open(AbstractItemCountingItemStreamItemReader.java:152)
+	at org.springframework.batch.item.support.CompositeItemStream.open(CompositeItemStream.java:124)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.open(TaskletStep.java:293)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:224)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:153)
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:417)
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:132)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:316)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:157)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:148)
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:70)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:178)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:166)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:161)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:156)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at br.com.training.arquivoMultiplosFormatosJob.ArquivoMultiplosFormatosJobApplication.main(ArquivoMultiplosFormatosJobApplication.java:10)
+Caused by: java.lang.IllegalStateException: Input resource must exist (reader is in 'strict' mode): path [C:\files\clientes.txt]
+	at org.springframework.batch.item.file.FlatFileItemReader.doOpen(FlatFileItemReader.java:262)
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.open(AbstractItemCountingItemStreamItemReader.java:149)
+	... 22 common frames omitted
+[2023-03-10 18:25:14,257] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [multiplosFormatosStep] executed in 14ms
+[2023-03-10 18:25:14,280] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=multiplosFormatosJob]] completed with the following parameters: [{'run.id':'{value=1, type=class java.lang.Long, identifying=true}'}] and the following status: [FAILED] in 53ms
+[2023-03-10 18:25:14,285] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-10 18:25:14,289] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-10 18:25:14,295] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-10 18:26:29,934] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting ArquivoMultiplosFormatosJobApplication using Java 17.0.5 with PID 14812 (C:\training\batch\arquivoMultiplosFormatosJob\target\classes started by dalexadi in C:\training\batch\arquivoMultiplosFormatosJob)
+[2023-03-10 18:26:29,936] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-10 18:26:30,381] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-10 18:26:30,399] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+[2023-03-10 18:26:30,677] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-10 18:26:31,003] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a75ec37
+[2023-03-10 18:26:31,005] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-10 18:26:31,135] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-10 18:26:31,187] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-10 18:26:31,495] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-10 18:26:31,699] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-10 18:26:31,707] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-10 18:26:31,931] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started ArquivoMultiplosFormatosJobApplication in 2.289 seconds (process running for 2.762)
+[2023-03-10 18:26:31,933] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-10 18:26:32,041] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=multiplosFormatosJob]] launched with the following parameters: [{'run.id':'{value=2, type=class java.lang.Long, identifying=true}'}]
+[2023-03-10 18:26:32,068] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [multiplosFormatosStep]
+[2023-03-10 18:26:32,102] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Cliente(nome=João, sobrenome=Silva, idade=32, email=joao@test.com)
+[2023-03-10 18:26:32,112] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Transacao(id=t1c1, descricao=Cadeado, valor=50.8)
+[2023-03-10 18:26:32,118] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Transacao(id=t2c1, descricao=TV, valor=1500.0)
+[2023-03-10 18:26:32,125] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Cliente(nome=Maria, sobrenome=Silva, idade=30, email=maria@test.com)
+[2023-03-10 18:26:32,130] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Transacao(id=t1c2, descricao=Geladeira duplex, valor=2000.0)
+[2023-03-10 18:26:32,136] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Transacao(id=t2c2, descricao=Mesa, valor=4500.0)
+[2023-03-10 18:26:32,145] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Transacao(id=t3c2, descricao=Sofá, valor=1099.0)
+[2023-03-10 18:26:32,151] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Cliente(nome=José, sobrenome=Silva, idade=20, email=jose@test.com)
+[2023-03-10 18:26:32,158] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Transacao(id=t1c3, descricao=Comida no Ifood, valor=500.45)
+[2023-03-10 18:26:32,195] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [multiplosFormatosStep] executed in 125ms
+[2023-03-10 18:26:32,214] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=multiplosFormatosJob]] completed with the following parameters: [{'run.id':'{value=2, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 159ms
+[2023-03-10 18:26:32,232] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-10 18:26:32,237] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-10 18:26:32,246] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
