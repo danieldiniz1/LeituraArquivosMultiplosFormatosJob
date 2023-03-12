@@ -3,13 +3,17 @@ package br.com.training.arquivoMultiplosFormatosJob.reader;
 import br.com.training.arquivoMultiplosFormatosJob.model.Cliente;
 import br.com.training.arquivoMultiplosFormatosJob.model.Transacao;
 import org.springframework.batch.item.*;
+import org.springframework.batch.item.file.FlatFileItemReader;
+import org.springframework.batch.item.file.FlatFileItemWriter;
+import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
+import org.springframework.core.io.Resource;
 
-public class ArquivoClienteTransacaoReader implements ItemStreamReader<Cliente> {
+public class ArquivoClienteTransacaoReader implements ItemStreamReader<Cliente>, ResourceAwareItemReaderItemStream<Cliente> {
 
-    private ItemStreamReader<Object> delegate;
+    private FlatFileItemReader<Object> delegate;
     private Object objectAtual;
 
-    public ArquivoClienteTransacaoReader(ItemStreamReader<Object> delegate) {
+    public ArquivoClienteTransacaoReader(FlatFileItemReader<Object> delegate) {
         this.delegate = delegate;
     }
 
@@ -46,5 +50,10 @@ public class ArquivoClienteTransacaoReader implements ItemStreamReader<Cliente> 
     @Override
     public void close() throws ItemStreamException {
         delegate.close();
+    }
+
+    @Override
+    public void setResource(Resource resource) {
+        delegate.setResource(resource);
     }
 }

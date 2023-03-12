@@ -22,3 +22,195 @@
 [2023-03-12 11:56:33,363] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
 [2023-03-12 11:56:33,367] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
 [2023-03-12 11:56:33,376] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-12 12:14:53,529] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting ArquivoMultiplosFormatosJobApplication using Java 17.0.5 with PID 12040 (C:\training\batch\arquivoMultiplosFormatosJob\target\classes started by dalexadi in C:\training\batch\arquivoMultiplosFormatosJob)
+[2023-03-12 12:14:53,531] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-12 12:14:53,968] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-12 12:14:53,988] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+[2023-03-12 12:14:54,281] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-12 12:14:54,630] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5981f4a6
+[2023-03-12 12:14:54,632] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-12 12:14:54,772] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-12 12:14:54,821] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-12 12:14:55,114] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-12 12:14:55,321] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-12 12:14:55,329] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-12 12:14:55,560] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started ArquivoMultiplosFormatosJobApplication in 2.366 seconds (process running for 2.862)
+[2023-03-12 12:14:55,562] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: []
+[2023-03-12 12:14:55,676] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=multiplosFormatosJob]] launched with the following parameters: [{'run.id':'{value=4, type=class java.lang.Long, identifying=true}'}]
+[2023-03-12 12:14:55,712] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [multiplosFormatosStep]
+[2023-03-12 12:14:55,739] [org.springframework.batch.core.step.AbstractStep] [main] [257] [ERROR] Encountered an error executing step multiplosFormatosStep in job multiplosFormatosJob
+org.springframework.batch.item.ItemStreamException: Failed to initialize the reader
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.open(AbstractItemCountingItemStreamItemReader.java:152)
+	at br.com.training.arquivoMultiplosFormatosJob.reader.ArquivoClienteTransacaoReader.open(ArquivoClienteTransacaoReader.java:42)
+	at org.springframework.batch.item.file.MultiResourceItemReader.read(MultiResourceItemReader.java:109)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:110)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.read(SimpleChunkProvider.java:189)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:137)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:362)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:139)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:129)
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:69)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:389)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:313)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:256)
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:362)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:206)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:139)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:241)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:227)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:153)
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:417)
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:132)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:316)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:157)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:148)
+	at org.springframework.batch.core.launch.support.TaskExecutorJobLauncher.run(TaskExecutorJobLauncher.java:70)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:178)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:166)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:161)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:156)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at br.com.training.arquivoMultiplosFormatosJob.ArquivoMultiplosFormatosJobApplication.main(ArquivoMultiplosFormatosJobApplication.java:10)
+Caused by: java.lang.IllegalStateException: Input resource must exist (reader is in 'strict' mode): path [C:\training\batch\arquivoMultiplosFormatosJob\files\clientes.txt\files\clientes2.txt\files\clientes3.txt]
+	at org.springframework.batch.item.file.FlatFileItemReader.doOpen(FlatFileItemReader.java:262)
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.open(AbstractItemCountingItemStreamItemReader.java:149)
+	... 39 common frames omitted
+[2023-03-12 12:14:55,746] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [multiplosFormatosStep] executed in 33ms
+[2023-03-12 12:14:55,767] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=multiplosFormatosJob]] completed with the following parameters: [{'run.id':'{value=4, type=class java.lang.Long, identifying=true}'}] and the following status: [FAILED] in 74ms
+[2023-03-12 12:14:55,774] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-12 12:14:55,777] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-12 12:14:55,784] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-12 12:20:41,437] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting ArquivoMultiplosFormatosJobApplication using Java 17.0.5 with PID 15108 (C:\training\batch\arquivoMultiplosFormatosJob\target\classes started by dalexadi in C:\training\batch\arquivoMultiplosFormatosJob)
+[2023-03-12 12:20:41,441] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-12 12:20:41,917] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-12 12:20:41,933] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+[2023-03-12 12:20:42,225] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-12 12:20:42,552] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f231ced
+[2023-03-12 12:20:42,555] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-12 12:20:42,716] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-12 12:20:42,766] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-12 12:20:43,076] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-12 12:20:43,315] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-12 12:20:43,326] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-12 12:20:43,358] [org.springframework.context.support.AbstractApplicationContext] [main] [592] [WARN ] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'multiplosFormatosJob' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/job/MultiplosFormatosJobConfig.class]: Unsatisfied dependency expressed through method 'multiplosFormatosJob' parameter 0: Error creating bean with name 'multiplosFormatosStep' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/step/MultiplosFormatosStepConfig.class]: Unsatisfied dependency expressed through method 'multiplosFormatosStep' parameter 2: Error creating bean with name 'multiplosArquivosCLienteTransacaoReader' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/reader/MultiplosArquivosCLienteTransacaoReaderConfig.class]: Failed to instantiate [org.springframework.batch.item.file.MultiResourceItemReader]: Factory method 'multiplosArquivosCLienteTransacaoReader' threw exception with message: Illegal char <*> at index 14: files/clientes*.txt
+[2023-03-12 12:20:43,360] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-12 12:20:43,362] [com.zaxxer.hikari.HikariDataSource] [main] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-12 12:20:43,368] [com.zaxxer.hikari.HikariDataSource] [main] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-12 12:20:43,375] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] [main] [82] [INFO ] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2023-03-12 12:20:43,392] [org.springframework.boot.SpringApplication] [main] [822] [ERROR] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'multiplosFormatosJob' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/job/MultiplosFormatosJobConfig.class]: Unsatisfied dependency expressed through method 'multiplosFormatosJob' parameter 0: Error creating bean with name 'multiplosFormatosStep' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/step/MultiplosFormatosStepConfig.class]: Unsatisfied dependency expressed through method 'multiplosFormatosStep' parameter 2: Error creating bean with name 'multiplosArquivosCLienteTransacaoReader' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/reader/MultiplosArquivosCLienteTransacaoReaderConfig.class]: Failed to instantiate [org.springframework.batch.item.file.MultiResourceItemReader]: Factory method 'multiplosArquivosCLienteTransacaoReader' threw exception with message: Illegal char <*> at index 14: files/clientes*.txt
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:548)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at br.com.training.arquivoMultiplosFormatosJob.ArquivoMultiplosFormatosJobApplication.main(ArquivoMultiplosFormatosJobApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'multiplosFormatosStep' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/step/MultiplosFormatosStepConfig.class]: Unsatisfied dependency expressed through method 'multiplosFormatosStep' parameter 2: Error creating bean with name 'multiplosArquivosCLienteTransacaoReader' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/reader/MultiplosArquivosCLienteTransacaoReaderConfig.class]: Failed to instantiate [org.springframework.batch.item.file.MultiResourceItemReader]: Factory method 'multiplosArquivosCLienteTransacaoReader' threw exception with message: Illegal char <*> at index 14: files/clientes*.txt
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:548)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'multiplosArquivosCLienteTransacaoReader' defined in class path resource [br/com/training/arquivoMultiplosFormatosJob/reader/MultiplosArquivosCLienteTransacaoReaderConfig.class]: Failed to instantiate [org.springframework.batch.item.file.MultiResourceItemReader]: Factory method 'multiplosArquivosCLienteTransacaoReader' threw exception with message: Illegal char <*> at index 14: files/clientes*.txt
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 32 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.item.file.MultiResourceItemReader]: Factory method 'multiplosArquivosCLienteTransacaoReader' threw exception with message: Illegal char <*> at index 14: files/clientes*.txt
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 46 common frames omitted
+Caused by: java.nio.file.InvalidPathException: Illegal char <*> at index 14: files/clientes*.txt
+	at java.base/sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:182)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:153)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77)
+	at java.base/sun.nio.fs.WindowsPath.parse(WindowsPath.java:92)
+	at java.base/sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:232)
+	at java.base/java.nio.file.Path.of(Path.java:147)
+	at java.base/java.nio.file.Paths.get(Paths.java:69)
+	at org.springframework.core.io.PathResource.<init>(PathResource.java:86)
+	at br.com.training.arquivoMultiplosFormatosJob.reader.MultiplosArquivosCLienteTransacaoReaderConfig.multiplosArquivosCLienteTransacaoReader(MultiplosArquivosCLienteTransacaoReaderConfig.java:23)
+	at br.com.training.arquivoMultiplosFormatosJob.reader.MultiplosArquivosCLienteTransacaoReaderConfig$$SpringCGLIB$$0.CGLIB$multiplosArquivosCLienteTransacaoReader$0(<generated>)
+	at br.com.training.arquivoMultiplosFormatosJob.reader.MultiplosArquivosCLienteTransacaoReaderConfig$$SpringCGLIB$$2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at br.com.training.arquivoMultiplosFormatosJob.reader.MultiplosArquivosCLienteTransacaoReaderConfig$$SpringCGLIB$$0.multiplosArquivosCLienteTransacaoReader(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	... 47 common frames omitted
+[2023-03-12 12:23:14,114] [org.springframework.boot.StartupInfoLogger] [main] [51] [INFO ] Starting ArquivoMultiplosFormatosJobApplication using Java 17.0.5 with PID 3748 (C:\training\batch\arquivoMultiplosFormatosJob\target\classes started by dalexadi in C:\training\batch\arquivoMultiplosFormatosJob)
+[2023-03-12 12:23:14,117] [org.springframework.boot.SpringApplication] [main] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-12 12:23:14,683] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-12 12:23:14,696] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [208] [INFO ] Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+[2023-03-12 12:23:14,953] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-12 12:23:15,309] [com.zaxxer.hikari.pool.HikariPool] [main] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5cc9d3d0
+[2023-03-12 12:23:15,314] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-12 12:23:15,455] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-12 12:23:15,508] [org.hibernate.Version] [main] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-12 12:23:15,812] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [main] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-12 12:23:16,047] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [main] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-12 12:23:16,059] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-12 12:23:16,306] [org.springframework.boot.StartupInfoLogger] [main] [57] [INFO ] Started ArquivoMultiplosFormatosJobApplication in 2.598 seconds (process running for 3.17)
+[2023-03-12 12:23:16,307] [org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner] [main] [160] [INFO ] Running default command line with: [arquivosClientes=file:files/clientes*.txt]
+[2023-03-12 12:23:16,447] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [154] [INFO ] Job: [SimpleJob: [name=multiplosFormatosJob]] launched with the following parameters: [{'arquivosClientes':'{value=file:files/clientes*.txt, type=class java.lang.String, identifying=true}','run.id':'{value=5, type=class java.lang.Long, identifying=true}'}]
+[2023-03-12 12:23:16,476] [org.springframework.batch.core.job.SimpleStepHandler] [main] [150] [INFO ] Executing step: [multiplosFormatosStep]
+[2023-03-12 12:23:16,526] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Cliente(nome=João, sobrenome=arquivo1, idade=32, email=joao@test.com, transacoes=[Transacao(id=t1c1, descricao=Cadeado, valor=50.8), Transacao(id=t2c1, descricao=TV, valor=1500.0)])
+[2023-03-12 12:23:16,535] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Cliente(nome=Maria, sobrenome=Silva, idade=30, email=maria@test.com, transacoes=[Transacao(id=t1c2, descricao=Geladeira duplex, valor=2000.0), Transacao(id=t2c2, descricao=Mesa, valor=4500.0), Transacao(id=t3c2, descricao=Sofá, valor=1099.0)])
+[2023-03-12 12:23:16,540] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Cliente(nome=José, sobrenome=Silva, idade=20, email=jose@test.com, transacoes=[Transacao(id=t1c3, descricao=Comida no Ifood, valor=500.45)])
+[2023-03-12 12:23:16,547] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Cliente(nome=Cliente, sobrenome=Arquivo2, idade=32, email=cliente2@test.com, transacoes=[Transacao(id=t1c1, descricao=Produto 2, valor=50.8), Transacao(id=t2c1, descricao=Produto 2, valor=1500.0)])
+[2023-03-12 12:23:16,556] [br.com.training.arquivoMultiplosFormatosJob.writer.MultiplosFormatosWriterConfig] [main] [16] [INFO ] Cliente(nome=Cliente, sobrenome=Arquivo3, idade=32, email=cliente2@test.com, transacoes=[Transacao(id=t1c1, descricao=Produto 2, valor=50.8), Transacao(id=t2c1, descricao=Produto 2, valor=1500.0)])
+[2023-03-12 12:23:16,570] [org.springframework.batch.core.step.AbstractStep] [main] [293] [INFO ] Step: [multiplosFormatosStep] executed in 93ms
+[2023-03-12 12:23:16,585] [org.springframework.batch.core.launch.support.SimpleJobLauncher$1] [main] [161] [INFO ] Job: [SimpleJob: [name=multiplosFormatosJob]] completed with the following parameters: [{'arquivosClientes':'{value=file:files/clientes*.txt, type=class java.lang.String, identifying=true}','run.id':'{value=5, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 126ms
+[2023-03-12 12:23:16,591] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-12 12:23:16,593] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-12 12:23:16,598] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
